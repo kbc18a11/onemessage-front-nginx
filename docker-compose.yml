@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  nginx_docker:
+    image: nginx:latest
+    container_name: nginx_example
+    ports:
+      - 80:80
+    volumes:
+      - ./onemessage-front:/var/www/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
